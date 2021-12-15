@@ -1,0 +1,1 @@
+https://opentutorials.org/module/3811/25296 이곳에 재미나는 python program 을 따라하기
