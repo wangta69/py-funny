@@ -1,3 +1,6 @@
 .idea
 *.mp4
 *.npz
+data_batch_*
+my-photo
+my-photos

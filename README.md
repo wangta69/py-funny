@@ -1,5 +1,5 @@
 # Funny Python
-출처 : https://opentutorials.org/module/3811/25296 
+출처 : https://opentutorials.org/module/3811
 
 ## 차량 번호판인식하기
 [예제](license_plate_recognition/README.md)
@@ -12,3 +12,7 @@
 [예제](youtube_stream_download/README.md)
 ## 물체추적 직캠
 [예제](object_tracking/README.md)
+
+## 이미지 모자이크
+[예제 - gray](image_mosaic/kmnist.md) \
+[예제 - color](image_mosaic/cifar10.md)
