@@ -18,10 +18,10 @@ img = cv2.resize(img, dsize=None, fx=0.2, fy=0.2)  # 크기는 20%로 줄임
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # color를 BGR 에서 RGB로 변경
 
 
-plt.figure(figsize=(20, 20))
-plt.axis('off')
-plt.imshow(img)
-plt.show()
+# plt.figure(figsize=(20, 20))
+# plt.axis('off')
+# plt.imshow(img)
+# plt.show()
 
 
 # Load and Preview Patch Images (CiFAR-10)
@@ -36,7 +36,8 @@ def unpickle(file):
 cifar10 = tf.keras.datasets.cifar10
 (train_images, train_labels), (test_images, test_labels) = cifar10.load_data()
 sample_imgs = train_images.astype(np.float64) / 255.
-
+# print(sample_imgs, sample_imgs.shape)
+# exit()
 # x_train_1 = unpickle('assets/dataset/data_batch_1')
 # x_train_2 = unpickle('assets/dataset/data_batch_2')
 # x_train_3 = unpickle('assets/dataset/data_batch_3')
@@ -50,13 +51,22 @@ sample_imgs = train_images.astype(np.float64) / 255.
 plt.figure(figsize=(20, 10))
 for i in range(80):
     img_patch = sample_imgs[i]
+    #
+    # plt.subplot(5, 16, i + 1)
+    # plt.axis('off')
+    # plt.imshow(img_patch)
 
-    plt.subplot(5, 16, i + 1)
-    plt.axis('off')
-    plt.imshow(img_patch)
+# plt.show()
 
+print('sample_imgs[0] ===== ')
+print(sample_imgs[0])
+
+plt.imshow(sample_imgs[0])
 plt.show()
 
+
+
+exit()
 # KMean Clustering for Image Quantization
 N_CLUSTERS = 32
 
@@ -74,7 +84,7 @@ img_array_sample = shuffle(img_array, random_state=0)
 # KMeans clustering
 kmeans = KMeans(n_clusters=N_CLUSTERS, random_state=0).fit(img_array_sample)
 
-print(kmeans.cluster_centers_)
+# print(kmeans.cluster_centers_)
 
 # Plot Quantized Image
 
@@ -94,10 +104,10 @@ for y in range(h):
 
         label_idx += 1
 
-plt.figure(figsize=(20, 20))
-plt.axis('off')
-plt.imshow(img_quantized)
-plt.show()
+# plt.figure(figsize=(20, 20))
+# plt.axis('off')
+# plt.imshow(img_quantized)
+# plt.show()
 
 # Compute Distance of Pixels and Patches
 DISTANCE_THRESHOLD = 0.1
@@ -128,7 +138,7 @@ for y in range(h):
         b = bins[label]
 
         img_patch = b[np.random.randint(len(b))]
-
+        print('img_patch', img_patch, 'mean', mean)
         img_out[y * 32:(y + 1) * 32, x * 32:(x + 1) * 32] = img_patch
 
 plt.figure(figsize=(20, 20))

@@ -16,3 +16,8 @@
 ## 이미지 모자이크
 [예제 - gray](image_mosaic/kmnist.md) \
 [예제 - color](image_mosaic/cifar10.md)
+
+## 얼굴 인식
+[예제 - 사람 얼굴 인식](face_detector/face.md) \
+[예제 - 고양이 얼굴 인식](cat_face_detector/cat.md) \
+[예제 - 강아지 얼굴 인식](dog_face_detector/dog.md)
