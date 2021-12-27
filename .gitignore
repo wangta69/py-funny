@@ -6,3 +6,7 @@ data_batch_*
 my-photo
 my-photos
 *.dat
+cat_face_detector/assets/data_cat_images
+*.npy
+cat_face_detector/assets/logs/*
+cat_face_detector/assets/models/*
